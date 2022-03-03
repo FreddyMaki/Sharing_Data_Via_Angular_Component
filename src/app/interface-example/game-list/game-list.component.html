@@ -1,0 +1,9 @@
+<p>game-list</p>
+<app-item-game *ngFor="let item of games; let i= index"
+                [games_dans_Item_game]="item"
+                [id_of_input]="i"
+                (insertedInput)="valeur_input($event)"
+                (commentEvent)="valeur_commentaire($event)"
+                ></app-item-game>
+
+<button (click)="showAlert()">Show Alert...</button>

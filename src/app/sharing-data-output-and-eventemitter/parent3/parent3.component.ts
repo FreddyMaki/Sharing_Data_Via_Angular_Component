@@ -18,8 +18,8 @@ export class Parent3Component implements OnInit {
 //The parent can now subscribe to this messageEvent that’s outputted by the child component, then run the receive message function whenever this event occurs.
 
   message : string="";
-   receiveMessage($event : any){
-     this.message = $event;
+  receiveMessage(event : any){
+     this.message = event;
    }
 
 }

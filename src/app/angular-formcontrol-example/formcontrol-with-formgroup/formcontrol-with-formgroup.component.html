@@ -1,0 +1,27 @@
+<p>Formcontrol With Formgroup </p>
+
+<form [formGroup]="userForm" (ngSubmit)="onFormSubmit()">
+  <div>
+    Name:<input formControlName="name" placeholder="Enter Name">
+    <label *ngIf="userName.invalid" [ngClass] = "'error'">Nom trop long!</label>
+   </div>
+
+  <div>
+    Age:<input formControlName="age" placeholder="Your age">
+    <label *ngIf="userForm.get('age')?.invalid" [ngClass] = "'error'"> Age is required. </label>
+  </div>
+
+  <div>
+     City:<input formControlName="city" placeholder="Enter city">
+  </div>
+
+  <div>
+    Country:<input formControlName="country" placeholder="Enter country">
+  </div>
+
+  <div>
+    <button type="submit">Soumettre</button>
+    <button type="button" (click)="setDefaultValue()">Set default...</button>
+  </div>
+</form>
+

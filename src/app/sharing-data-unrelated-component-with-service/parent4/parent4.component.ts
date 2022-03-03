@@ -10,7 +10,7 @@ import { DataService } from '../data.service';
 export class Parent4Component implements OnInit {
 
    /* When passing data between components that lack a direct connection, such as siblings, grandchildren, etc, you should have a shared service.
- When you have data that should aways been in sync, I find the RxJS BehaviorSubject very useful in this situation.
+ When you have data that should always been in sync, I find the RxJS BehaviorSubject very useful in this situation.
 You can also use a regular RxJS Subject for sharing data via the service, but here’s why I prefer a BehaviorSubject.
 
     It will always return the current value on subscription - there is no need to call onnext

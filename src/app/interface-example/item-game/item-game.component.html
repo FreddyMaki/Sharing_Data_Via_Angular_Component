@@ -1,0 +1,5 @@
+<li class="list-group-item">
+  <label for="inputGame">Game name :{{ games_dans_Item_game.gameName }} </label>
+  <input id ="inputGame" type="text" placeholder="your comment...." [(ngModel)] ="comment" (change)="getInputID(id_of_input)">
+  <button (click)="sendComment(comment)">Send comment...</button>
+</li>

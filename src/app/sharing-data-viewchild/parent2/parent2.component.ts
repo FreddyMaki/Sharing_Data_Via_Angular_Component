@@ -16,7 +16,7 @@ export class Parent2Component implements OnInit {
 
   //ViewChild allows a one component to be injected into another, giving the parent access to its attributes and functions. One caveat, however, is that child won’t be available until after the view has been initialized.
   //This means we need to implement the AfterViewInit lifecycle hook to receive the data from the child.
-  @ViewChild(Child2Component) child2:any;
+  @ViewChild(Child2Component) child2 : any;
   message: string ="";
 
   ngAfterViewInit(){

@@ -1,16 +1,42 @@
-<h2>Parent to Child: Sharing Data via Input</h2>
-<app-parent></app-parent>
+<div class="container">
+    <h2>Parent to Child: Sharing Data via Input</h2>
+  <app-parent></app-parent>
 
-<h2>Child to Parent: Sharing Data via ViewChild</h2>
-<app-parent2></app-parent2>
+  <h2>Child to Parent: Sharing Data via ViewChild</h2>
+  <app-parent2></app-parent2>
 
-<h2>Child to Parent: Sharing Data via Output() and EventEmitter</h2>
-<app-parent3></app-parent3>
+  <h2>Child to Parent: Sharing Data via Output() and EventEmitter</h2>
+  <app-parent3></app-parent3>
 
-<h2>Unrelated Components: Sharing Data with a Service</h2>
-Component 1
-<app-parent4></app-parent4>
+  <h2>Unrelated Components: Sharing Data with a Service</h2>
+  Component 1
+  <app-parent4></app-parent4>
 
-Component 2
-<app-sibling></app-sibling>
+  Component 2
+  <app-sibling></app-sibling>
 
+  <h2>Sharing data with NgModel</h2>
+  <app-example></app-example>
+
+  <h2>Use angular service to store data for components.</h2>
+  <app-select-hotel></app-select-hotel>
+
+  <h2>Interface example, Input get value, call a method in parent component</h2>
+  <app-game-list (insertedInput)="getIdValue($event)" (commentEvent)="getComment($event)" (callParentMethod)="callParent()"></app-game-list>
+
+        input id:{{id_of_input}}  /input value :{{comment}}<br/>
+
+  <h2>-------------------------------------------------------------------------------</h2>
+  <h1>Angular Form Control Example</h1>
+  <app-form-control-example></app-form-control-example>
+  <h2>Angular Form Control Example With FormGroup</h2>
+  <app-formcontrol-with-formgroup></app-formcontrol-with-formgroup>
+  <h2>FormControl with FormArray using FormControlName </h2>
+  <app-formcontrol-with-formarray></app-formcontrol-with-formarray>
+  <h2>Angular 6 Reactive Form with FormBuilder</h2>
+  <app-form-control-with-formbuilder></app-form-control-with-formbuilder> <br/>
+
+  <h2>-------------------------------------------------------------------------------</h2>
+  <h2>Dynamically Add and Remove Form Fields in Angular</h2>
+  <app-add-remove-form></app-add-remove-form>
+</div>

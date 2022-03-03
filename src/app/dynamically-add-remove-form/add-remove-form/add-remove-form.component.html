@@ -1,0 +1,49 @@
+<div class="container">
+  <h1> Dynamically Add New Input Fields in Angular, with Validator Formroup </h1>
+  <form [formGroup]="productform" (ngSubmit)="onSubmit()">
+    <p>
+      <label for="name">Product Name:</label>
+      <input type="text" id="name" name="name" formControlName="name" class="form-control">
+    </p>
+    <table  class="table table-bordered" formArrayName="quantities">
+
+      <tr>
+        <th colspan="2">Add Multiple Quantity:</th>
+        <th width="150px"><button type="button" (click)="addQuantity()" class="btn btn-primary">Add More</button></th>
+      </tr>
+
+      <tr *ngFor="let item of quantities().controls; let i=index" [formGroupName]="i">
+        <td>
+            Quantity :
+            <input
+              type="text"
+              formControlName="qty"
+              class="form-control"
+              required><br/>
+              <div *ngIf="item.invalid" class="alert alert-danger">Champ requis!</div>
+        </td>
+        <td>
+            Price:
+            <input
+              type="number"
+              formControlName="price"
+              class="form-control"
+              required><br/>
+              <div *ngIf="item.invalid" class="alert alert-danger">Champ requis!</div>
+        </td>
+        <td>
+            <button (click)="removeQuantities(i)" class="btn btn-danger">Remove</button>
+        </td>
+      </tr>
+
+    </table>
+
+    <button
+      [disabled]="productform.invalid"
+      type="submit"
+      class="btn btn-success">Submit</button>
+  </form>
+
+  <br/>
+  {{this.productform.value | json}}
+</div>

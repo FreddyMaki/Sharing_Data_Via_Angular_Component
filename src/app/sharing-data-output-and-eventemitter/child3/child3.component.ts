@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Parent3Component } from '../parent3/parent3.component';
 
 
 @Component({
@@ -7,6 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./child3.component.scss']
 })
 export class Child3Component implements OnInit {
+
 
   constructor() { }
 

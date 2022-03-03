@@ -1,0 +1,14 @@
+<p>formcontrol-with-formarray</p>
+<div>
+  <form [formGroup]="userForm" (ngSubmit)="onFormSubmit()">
+    <div *ngFor="let user of users.controls; let i=index">
+      <input  placeholder="Enter User Name">
+      <button (click)="deleteUserField(i)">Delete</button>
+    </div>
+
+    <button type="submit">Submit</button>
+    <button type="button"(click)="addUserField()">Add More user</button>
+  </form>
+</div>
+
+
