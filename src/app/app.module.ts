@@ -26,6 +26,11 @@ import { FormcontrolWithFormgroupComponent } from './angular-formcontrol-example
 import { FormcontrolWithFormarrayComponent } from './angular-formcontrol-example/formcontrol-with-formarray/formcontrol-with-formarray.component';
 import { FormControlWithFormbuilderComponent } from './angular-formcontrol-example/form-control-with-formbuilder/form-control-with-formbuilder.component';
 import { AddRemoveFormComponent } from './dynamically-add-remove-form/add-remove-form/add-remove-form.component';
+import {MatDialogModule, MatDialogRef} from '@angular/material/dialog';
+import { MessageDialogComponent } from './angular-material-dialog-modal/message-dialog/message-dialog.component';
+import { ParentDialogExampleComponent } from './angular-material-dialog-modal/parent-dialog-example/parent-dialog-example.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -47,14 +52,25 @@ import { AddRemoveFormComponent } from './dynamically-add-remove-form/add-remove
     FormcontrolWithFormgroupComponent,
     FormcontrolWithFormarrayComponent,
     FormControlWithFormbuilderComponent,
-    AddRemoveFormComponent
+    AddRemoveFormComponent,
+    MessageDialogComponent,
+    ParentDialogExampleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatButtonModule,
+    MatCardModule
+
   ],
+  exports:[MatInputModule],
+
   providers: [],
   bootstrap: [AppComponent]
 })
