@@ -31,6 +31,10 @@ import { MessageDialogComponent } from './angular-material-dialog-modal/message-
 import { ParentDialogExampleComponent } from './angular-material-dialog-modal/parent-dialog-example/parent-dialog-example.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { PersistDataComponent } from './persist-data-using-local-storage/persist-data/persist-data.component';
+import { APP_ROUTING } from './myapp.routing';
+import { HeaderComponent } from './header/header/header.component';
+import { SelectRoomComponent } from './service-to-store-data-for-component/select-room/select-room.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +58,10 @@ import { MatCardModule } from '@angular/material/card';
     FormControlWithFormbuilderComponent,
     AddRemoveFormComponent,
     MessageDialogComponent,
-    ParentDialogExampleComponent
+    ParentDialogExampleComponent,
+    PersistDataComponent,
+    HeaderComponent,
+    SelectRoomComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +73,8 @@ import { MatCardModule } from '@angular/material/card';
     BrowserAnimationsModule,
     MatInputModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    APP_ROUTING
 
   ],
   exports:[MatInputModule],

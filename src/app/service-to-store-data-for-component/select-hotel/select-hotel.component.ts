@@ -9,14 +9,16 @@ import { HotelService } from '../hotel.service';
 })
 export class SelectHotelComponent implements OnInit {
 
-  constructor(public hotelService: HotelService, private router: Router) { }
+  constructor(public hotelService: HotelService, public router: Router) { }
 
   ngOnInit(): void {
-    this.hotelService.selectedHotel ={Name: "Hotel 5 etoiles", Id: "1"};
+    // this.hotelService.selectedHotel ={Name: "Hotel 5 etoiles", Id: "1"};
   }
 
   goToNext(){
-    this.router.navigateByUrl('/select-room');
+    //Select hotel:
+    this.hotelService.selectedHotel ={Name: "Hotel 5 etoiles", Id: "1"};
+    this.router.navigate(['room']);
   }
 
 }

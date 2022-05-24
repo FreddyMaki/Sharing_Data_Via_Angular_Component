@@ -1,4 +1,30 @@
+<!-- NavBar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <!-- Utilisation de app-routing pour afficher les pages en assignant la propriété routerLink  -->
+        <!-- routerLinkActive permet de faire en sorte que le lien soit activer -->
+        <a class="nav-link" [routerLink]="['']" routerLinkActive="active">Home<span class="sr-only"></span></a>
+      </li>
+      <li  class="nav-item">
+        <a class="nav-link" [routerLink]="['parent']" routerLinkActive="active">Parent<span class="sr-only"></span></a>
+      </li>
+      <li  class="nav-item">
+        <a class="nav-link" [routerLink]="['child']" routerLinkActive="active">Child<span class="sr-only"></span></a>
+      </li>
+
+      </ul>
+  </div>
+</nav>
+<router-outlet></router-outlet><br/>
+
+
+
 <div class="container">
+  <h2>Open link in a new Tab</h2>
+  <button (click)="openNewTab()" >Open new tab</button>
+
     <h2>Parent to Child: Sharing Data via Input</h2>
   <app-parent></app-parent>
 
@@ -6,7 +32,7 @@
   <app-parent2></app-parent2>
 
   <h2>Child to Parent: Sharing Data via Output() and EventEmitter</h2>
-  <app-parent3></app-parent3>
+  <app-parent3></app-parent3><br/>
 
   <h2>Unrelated Components: Sharing Data with a Service</h2>
   Component 1
@@ -42,6 +68,38 @@
 
   <h2>-------------------------------------------------------------------------------</h2>
   <h2>Angular Material Dialog: A Complete Example</h2>
-  <app-parent-dialog-example></app-parent-dialog-example>
+  <app-parent-dialog-example></app-parent-dialog-example><br/>
+
+  <h2>-------------------------------------------------------------------------------</h2>
+  <h2>Angular - How to preserve or persist data on page refresh</h2>
+  <app-persist-data></app-persist-data> <br/>
+
+  <h2>-------------------------------------------------------------------------------</h2>
+  <h2>Remove character from string, test character</h2>
+  <input #inputText type="text" [(ngModel)]="value" >
+  <button (click)="removeCharacter(inputText.value)">Remove character</button>
+  <button (click)="removeSpace(inputText.value)">Remove space</button>
+
+  <p>Is a letter:{{resultat}}</p>
+  <button (click)="isCharacterALetter(inputText.value)">Test character</button>
+
+  <p>Convert a character to ASCII number</p>
+  <button (click)="convertCharactertoASCII(inputText.value)">Convert letter to ASCII number</button> ASCII number {{res}}
+
+  <hr>
+  <div>
+    <h4>Calculer cle et numero a partir de secu : 177059911405107</h4>
+    <label for="inputCle">Cle</label>
+    <input id="inputCle" [(ngModel)]="cle"> <br/>
+
+    <label for="inputNum">Numero</label>
+    <input id="inputNum" [(ngModel)]="num"> <br/>
+
+    <button (click)="calculer()">Calculer cle et numero</button> <br/>
+
+
+  </div>
+
+
 
 </div>

@@ -1,0 +1,19 @@
+<p>persist-data works!</p>
+<h2> your favourite food is
+  <span class="accent">{{food}}</span>
+</h2>
+
+<form [formGroup]="form" (ngSubmit)="saveFoodToStorage()">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Favorite food</mat-label>
+    <input autocomplete="off" matInput formControlName="food">
+  </mat-form-field>
+
+  <button color="primary" mat-raised-button>Submit</button>
+  <button color="accent"
+          type="button"
+          (click)="resetStorage()"
+          class="second-button"
+          mat-raised-button> Reset
+        </button>
+</form>

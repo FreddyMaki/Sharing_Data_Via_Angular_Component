@@ -10,7 +10,7 @@ import { MessageDialogComponent } from '../message-dialog/message-dialog.compone
 
 export class ParentDialogExampleComponent implements OnInit {
   animal: string="";;
-  name: string="";
+  name: string="Florin Coco";
   constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {
