@@ -35,6 +35,8 @@ import { PersistDataComponent } from './persist-data-using-local-storage/persist
 import { APP_ROUTING } from './myapp.routing';
 import { HeaderComponent } from './header/header/header.component';
 import { SelectRoomComponent } from './service-to-store-data-for-component/select-room/select-room.component';
+import { InteractParentComponent } from './component-interaction/interact-parent/interact-parent.component';
+import { InteractChildComponent } from './component-interaction/interact-child/interact-child.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +63,9 @@ import { SelectRoomComponent } from './service-to-store-data-for-component/selec
     ParentDialogExampleComponent,
     PersistDataComponent,
     HeaderComponent,
-    SelectRoomComponent
+    SelectRoomComponent,
+    InteractParentComponent,
+    InteractChildComponent
   ],
   imports: [
     BrowserModule,

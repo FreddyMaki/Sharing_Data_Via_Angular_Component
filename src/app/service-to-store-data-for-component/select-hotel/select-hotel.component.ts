@@ -12,7 +12,7 @@ export class SelectHotelComponent implements OnInit {
   constructor(public hotelService: HotelService, public router: Router) { }
 
   ngOnInit(): void {
-    // this.hotelService.selectedHotel ={Name: "Hotel 5 etoiles", Id: "1"};
+     this.hotelService.selectedHotel ={Name: "Hotel 5 etoiles", Id: "1"};
   }
 
   goToNext(){
