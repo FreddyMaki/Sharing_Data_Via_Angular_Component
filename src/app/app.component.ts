@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import {environment} from '../environments/environment';
 
 import { IGame } from './interface-example/game';
 
@@ -132,5 +133,8 @@ export class AppComponent {
 
     this.value =strNumero;
   }
+
+  //ENVIRONMENT EXAMPLE////////////////////////////////
+  env :any= environment;
 
 }

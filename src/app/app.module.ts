@@ -33,10 +33,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { PersistDataComponent } from './persist-data-using-local-storage/persist-data/persist-data.component';
 import { APP_ROUTING } from './myapp.routing';
-import { HeaderComponent } from './header/header/header.component';
+
 import { SelectRoomComponent } from './service-to-store-data-for-component/select-room/select-room.component';
 import { InteractParentComponent } from './component-interaction/interact-parent/interact-parent.component';
 import { InteractChildComponent } from './component-interaction/interact-child/interact-child.component';
+import { IframeExampleComponent } from './iframe-example/iframe-example/iframe-example.component';
+import { ReloginComponent } from './iframe-example/relogin/relogin.component';
+
 
 @NgModule({
   declarations: [
@@ -62,10 +65,13 @@ import { InteractChildComponent } from './component-interaction/interact-child/i
     MessageDialogComponent,
     ParentDialogExampleComponent,
     PersistDataComponent,
-    HeaderComponent,
+
     SelectRoomComponent,
     InteractParentComponent,
-    InteractChildComponent
+    InteractChildComponent,
+    IframeExampleComponent,
+    ReloginComponent,
+
   ],
   imports: [
     BrowserModule,

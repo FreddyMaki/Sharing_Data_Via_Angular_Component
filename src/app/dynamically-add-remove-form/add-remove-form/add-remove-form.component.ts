@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-add-remove-form',
@@ -26,7 +26,7 @@ export class AddRemoveFormComponent implements OnInit {
   newQuantities(){
     return this.formBuilder.group(
       {
-                      qty:'',
+                      qty: new FormControl('', Validators.required ),
                       price:''
                     })
   }

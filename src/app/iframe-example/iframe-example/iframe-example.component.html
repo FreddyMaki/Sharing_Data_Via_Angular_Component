@@ -1,0 +1,10 @@
+<p>iframe-example works!</p>
+<iframe
+  [src]="iframeUrl"
+  *ngIf="displayIframe"
+  style="height:80%; width:80; z-index: 20; position:absolute; background: white;"
+  id="loginIframe">
+
+</iframe>
+
+<button (click)="openIframe()" >open iframe</button>

@@ -20,7 +20,7 @@
               formControlName="qty"
               class="form-control"
               required><br/>
-              <div *ngIf="item.invalid" class="alert alert-danger">Champ requis!</div>
+              <div *ngIf="item.get('qty')?.hasError('required') && item.get('qty')" class="alert alert-danger">Champ requis!</div>
         </td>
         <td>
             Price:
@@ -29,7 +29,8 @@
               formControlName="price"
               class="form-control"
               required><br/>
-              <div *ngIf="item.invalid" class="alert alert-danger">Champ requis!</div>
+              <!-- <div *ngIf="item.invalid" class="alert alert-danger">Champ requis!</div> -->
+              <div *ngIf="item.get('price')?.invalid" class="alert alert-danger">Champ requis!</div>
         </td>
         <td>
             <button (click)="removeQuantities(i)" class="btn btn-danger">Remove</button>
