@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { UntypedFormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form-control-example',
@@ -9,11 +9,11 @@ import { FormControl, Validators } from '@angular/forms';
 export class FormControlExampleComponent implements OnInit {
 
   //DECLARATION FORM CONTROL:
-  name: FormControl = new FormControl('',[Validators.required, Validators.maxLength(15)]);
-  age :FormControl = new FormControl(20, Validators.required); //20 valeur par defaut
-  city :FormControl= new FormControl();
-  country : FormControl=  new FormControl({value:'India', disabled :true});
-  married = new FormControl(true);
+  name: UntypedFormControl = new UntypedFormControl('',[Validators.required, Validators.maxLength(15)]);
+  age :UntypedFormControl = new UntypedFormControl(20, Validators.required); //20 valeur par defaut
+  city :UntypedFormControl= new UntypedFormControl();
+  country : UntypedFormControl=  new UntypedFormControl({value:'India', disabled :true});
+  married = new UntypedFormControl(true);
 
   //Initialization values:
   setNameValue(){
@@ -32,7 +32,7 @@ export class FormControlExampleComponent implements OnInit {
   //Change Value
   changeValue() {
     console.log(this.married.value);
-    this.married = new FormControl(!this.married.value);
+    this.married = new UntypedFormControl(!this.married.value);
   }
 
   constructor() { }

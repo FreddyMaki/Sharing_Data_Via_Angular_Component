@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormControl, FormGroup } from '@angular/forms';
+import { UntypedFormArray, UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-formcontrol-with-formarray',
@@ -14,9 +14,9 @@ export class FormcontrolWithFormarrayComponent implements OnInit {
   //Declaration
   //users : FormArray= new FormArray([]);
   //users: FormArray = new FormArray([new FormControl('Maesh'), new FormControl('Sareraka'), new FormControl()]);
-  userForm : FormGroup = new FormGroup(
+  userForm : UntypedFormGroup = new UntypedFormGroup(
     {
-      users: new FormArray([new FormControl('Maesh'), new FormControl('Sareraka'), new FormControl()])
+      users: new UntypedFormArray([new UntypedFormControl('Maesh'), new UntypedFormControl('Sareraka'), new UntypedFormControl()])
     }
   );
   constructor() { }
@@ -24,15 +24,15 @@ export class FormcontrolWithFormarrayComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  get users(): FormArray{
-    return this.userForm.get('users') as FormArray;
+  get users(): UntypedFormArray{
+    return this.userForm.get('users') as UntypedFormArray;
   }
 
 
   // On the instance of FormArray i.e users , we will call controls that will return array of FormControl instances.
   // Now to add a form control at run time we need to use push() method of FormArray.
   addUserField() {
-    this.users.push(new FormControl());
+    this.users.push(new UntypedFormControl());
   }
 
   //To remove a form control at run time we need to use removeAt() method of FormArray.

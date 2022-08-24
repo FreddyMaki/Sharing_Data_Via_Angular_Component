@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-formcontrol-with-formgroup',
@@ -9,11 +9,11 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class FormcontrolWithFormgroupComponent implements OnInit {
 
   //Declaration FormGroup with FormControl
-  userForm : FormGroup = new FormGroup({
-    name: new FormControl('Maesh', Validators.maxLength(10)),
-    age: new FormControl(20, Validators.required),
-    city: new FormControl(),
-    country: new FormControl()
+  userForm : UntypedFormGroup = new UntypedFormGroup({
+    name: new UntypedFormControl('Maesh', Validators.maxLength(10)),
+    age: new UntypedFormControl(20, Validators.required),
+    city: new UntypedFormControl(),
+    country: new UntypedFormControl()
   })
 
   constructor() { }

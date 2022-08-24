@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-persist-data',
@@ -7,9 +7,9 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./persist-data.component.scss']
 })
 export class PersistDataComponent implements OnInit {
-  form!: FormGroup;
+  form!: UntypedFormGroup;
   public food:string="not selected";
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: UntypedFormBuilder) {
     this.form = this.fb.group({food : []})
   }
 

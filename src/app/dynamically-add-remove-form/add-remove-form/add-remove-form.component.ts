@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormArray, UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-add-remove-form',
@@ -8,9 +8,9 @@ import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@ang
 })
 export class AddRemoveFormComponent implements OnInit {
   name: string = "Angular";
-  productform !: FormGroup
+  productform !: UntypedFormGroup
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: UntypedFormBuilder) {
     this.productform = this.formBuilder.group(
       {
         name: "",
@@ -21,12 +21,12 @@ export class AddRemoveFormComponent implements OnInit {
   }
 
   quantities(){
-    return this.productform.get("quantities") as FormArray;
+    return this.productform.get("quantities") as UntypedFormArray;
   }
   newQuantities(){
     return this.formBuilder.group(
       {
-                      qty: new FormControl('', Validators.required ),
+                      qty: new UntypedFormControl('', Validators.required ),
                       price:''
                     })
   }
