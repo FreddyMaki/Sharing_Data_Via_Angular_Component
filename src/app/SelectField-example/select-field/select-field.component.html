@@ -1,0 +1,22 @@
+
+
+<h2>NgSelect2 </h2>
+<label *ngIf="!!label">{{ label }}</label>
+<ng-select2
+  [(ngModel)]="bindingModel"
+  (ngModelChange)="bindingModelChange.emit(bindingModel)"
+  [data]="data"
+  width="150"
+  [options]="options"
+>
+</ng-select2>
+Test:{{bindingModel}}
+
+
+<hr>
+<h2>Select standard</h2>
+<select
+  [(ngModel)]="selection">
+  <option>Select item</option>
+  <option *ngFor="let item of selectionList">{{item}}</option>
+</select>

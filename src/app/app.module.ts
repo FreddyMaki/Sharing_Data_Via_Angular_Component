@@ -39,7 +39,9 @@ import { InteractParentComponent } from './component-interaction/interact-parent
 import { InteractChildComponent } from './component-interaction/interact-child/interact-child.component';
 import { IframeExampleComponent } from './iframe-example/iframe-example/iframe-example.component';
 import { ReloginComponent } from './iframe-example/relogin/relogin.component';
-
+import { SelectFieldComponent } from './SelectField-example/select-field/select-field.component';
+import {NgSelect2Module} from 'ng-select2';
+import { ParentSelectFieldComponent } from './SelectField-example/parent-select-field/parent-select-field.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +73,8 @@ import { ReloginComponent } from './iframe-example/relogin/relogin.component';
     InteractChildComponent,
     IframeExampleComponent,
     ReloginComponent,
+    SelectFieldComponent,
+    ParentSelectFieldComponent,
 
   ],
   imports: [
@@ -84,7 +88,8 @@ import { ReloginComponent } from './iframe-example/relogin/relogin.component';
     MatInputModule,
     MatButtonModule,
     MatCardModule,
-    APP_ROUTING
+    APP_ROUTING,
+    NgSelect2Module
 
   ],
   exports:[MatInputModule],

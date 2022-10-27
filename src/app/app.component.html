@@ -1,118 +1,120 @@
 <!-- NavBar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="collapse navbar-collapse">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <!-- Utilisation de app-routing pour afficher les pages en assignant la propriété routerLink  -->
-        <!-- routerLinkActive permet de faire en sorte que le lien soit activer -->
-        <a class="nav-link" [routerLink]="['']" routerLinkActive="active">Home<span class="sr-only"></span></a>
-      </li>
-      <li  class="nav-item">
-        <a class="nav-link" [routerLink]="['parent']" routerLinkActive="active">Parent<span class="sr-only"></span></a>
-      </li>
-      <li  class="nav-item">
-        <a class="nav-link" [routerLink]="['child']" routerLinkActive="active">Child<span class="sr-only"></span></a>
-      </li>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <!-- Utilisation de app-routing pour afficher les pages en assignant la propriété routerLink  -->
+                <!-- routerLinkActive permet de faire en sorte que le lien soit activer -->
+                <a class="nav-link" [routerLink]="['']" routerLinkActive="active">Home<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['parent']" routerLinkActive="active">Parent<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['child']" routerLinkActive="active">Child<span class="sr-only"></span></a>
+            </li>
 
-      </ul>
-  </div>
+        </ul>
+    </div>
 </nav>
 <router-outlet></router-outlet><br/>
 
 
 
 <div class="container">
-  <h2>Open link in a new Tab</h2>
-  <button (click)="openNewTab()" >Open new tab</button>
+    <h2>Open link in a new Tab</h2>
+    <button (click)="openNewTab()">Open new tab</button>
 
     <h2>Parent to Child: Sharing Data via Input</h2>
-  <app-parent></app-parent>
+    <app-parent></app-parent>
 
-  <h2>Child to Parent: Sharing Data via ViewChild</h2>
-  <app-parent2></app-parent2>
+    <h2>Child to Parent: Sharing Data via ViewChild</h2>
+    <app-parent2></app-parent2>
 
-  <h2>Child to Parent: Sharing Data via Output() and EventEmitter</h2>
-  <app-parent3></app-parent3><br/>
+    <h2>Child to Parent: Sharing Data via Output() and EventEmitter</h2>
+    <app-parent3></app-parent3><br/>
 
-  <h2>Unrelated Components: Sharing Data with a Service</h2>
-  Component 1
-  <app-parent4></app-parent4>
+    <h2>Unrelated Components: Sharing Data with a Service</h2>
+    Component 1
+    <app-parent4></app-parent4>
 
-  Component 2
-  <app-sibling></app-sibling>
+    Component 2
+    <app-sibling></app-sibling>
 
-  <h2>Sharing data with NgModel</h2>
-  <app-example></app-example>
+    <h2>Sharing data with NgModel</h2>
+    <app-example></app-example>
 
-  <h2>Use angular service to store data for components.</h2>
-  <app-select-hotel></app-select-hotel>
+    <h2>Use angular service to store data for components.</h2>
+    <app-select-hotel></app-select-hotel>
 
-  <h2>Interface example, Input get value, call a method in parent component</h2>
-  <app-game-list (insertedInput)="getIdValue($event)" (commentEvent)="getComment($event)" (callParentMethod)="callParent()"></app-game-list>
+    <h2>Interface example, Input get value, and call a method in parent component from CHILD GameListComponent</h2>
+    <app-game-list (insertedInput)="getIdValue($event)" (commentEvent)="getComment($event)" (callParentMethod)="callParent()"></app-game-list>
 
-        input id:{{id_of_input}}  /input value :{{comment}}<br/>
+    input id:{{id_of_input}} /input value :{{comment}}<br/>
 
-  <h2>-------------------------------------------------------------------------------</h2>
-  <h1>Angular Form Control Example</h1>
-  <app-form-control-example></app-form-control-example>
-  <h2>Angular Form Control Example With FormGroup</h2>
-  <app-formcontrol-with-formgroup></app-formcontrol-with-formgroup>
-  <h2>FormControl with FormArray using FormControlName </h2>
-  <app-formcontrol-with-formarray></app-formcontrol-with-formarray>
-  <h2>Angular 6 Reactive Form with FormBuilder</h2>
-  <app-form-control-with-formbuilder></app-form-control-with-formbuilder> <br/>
+    <h2>-------------------------------------------------------------------------------</h2>
+    <h1>Angular Form Control Example</h1>
+    <app-form-control-example></app-form-control-example>
+    <h2>Angular Form Control Example With FormGroup</h2>
+    <app-formcontrol-with-formgroup></app-formcontrol-with-formgroup>
+    <h2>FormControl with FormArray using FormControlName </h2>
+    <app-formcontrol-with-formarray></app-formcontrol-with-formarray>
+    <h2>Angular 6 Reactive Form with FormBuilder</h2>
+    <app-form-control-with-formbuilder></app-form-control-with-formbuilder> <br/>
 
-  <h2>-------------------------------------------------------------------------------</h2>
-  <h2>Dynamically Add and Remove Form Fields in Angular</h2>
-  <app-add-remove-form></app-add-remove-form> <br/>
+    <h2>-------------------------------------------------------------------------------</h2>
+    <h2>Dynamically Add and Remove Form Fields in Angular</h2>
+    <app-add-remove-form></app-add-remove-form> <br/>
 
-  <h2>-------------------------------------------------------------------------------</h2>
-  <h2>Angular Material Dialog: A Complete Example</h2>
-  <app-parent-dialog-example></app-parent-dialog-example><br/>
+    <h2>-------------------------------------------------------------------------------</h2>
+    <h2>Angular Material Dialog: A Complete Example</h2>
+    <app-parent-dialog-example></app-parent-dialog-example><br/>
 
-  <h2>-------------------------------------------------------------------------------</h2>
-  <h2>Angular - How to preserve or persist data on page refresh</h2>
-  <app-persist-data></app-persist-data> <br/>
+    <h2>-------------------------------------------------------------------------------</h2>
+    <h2>Angular - How to preserve or persist data on page refresh</h2>
+    <app-persist-data></app-persist-data> <br/>
 
-  <h2>-------------------------------------------------------------------------------</h2>
-  <h2>Remove character from string, test character</h2>
-  <input #inputText type="text" [(ngModel)]="value" >
-  <button (click)="removeCharacter(inputText.value)">Remove character</button>
-  <button (click)="removeSpace(inputText.value)">Remove space</button>
+    <h2>-------------------------------------------------------------------------------</h2>
+    <h2>Remove character from string, test character</h2>
+    <input #inputText type="text" [(ngModel)]="value">
+    <button (click)="removeCharacter(inputText.value)">Remove character</button>
+    <button (click)="removeSpace(inputText.value)">Remove space</button>
 
-  <p>Is a letter:{{resultat}}</p>
-  <button (click)="isCharacterALetter(inputText.value)">Test character</button>
+    <p>Is a letter:{{resultat}}</p>
+    <button (click)="isCharacterALetter(inputText.value)">Test character</button>
 
-  <p>Convert a character to ASCII number</p>
-  <button (click)="convertCharactertoASCII(inputText.value)">Convert letter to ASCII number</button> ASCII number {{res}}
+    <p>Convert a character to ASCII number</p>
+    <button (click)="convertCharactertoASCII(inputText.value)">Convert letter to ASCII number</button> ASCII number {{res}}
 
-  <hr>
-  <div>
-    <h4>Calculer cle et numero a partir de secu : 177059911405107</h4>
-    <label for="inputCle">Cle</label>
-    <input id="inputCle" [(ngModel)]="cle"> <br/>
+    <hr>
+    <div>
+        <h4>Calculer cle et numero a partir de secu : 177059911405107</h4>
+        <label for="inputCle">Cle</label>
+        <input id="inputCle" [(ngModel)]="cle"> <br/>
 
-    <label for="inputNum">Numero</label>
-    <input id="inputNum" [(ngModel)]="num"> <br/>
+        <label for="inputNum">Numero</label>
+        <input id="inputNum" [(ngModel)]="num"> <br/>
 
-    <button (click)="calculer()">Calculer cle et numero</button> <br/>
+        <button (click)="calculer()">Calculer cle et numero</button> <br/>
 
 
-  </div><br/>
-  <hr>
-  <h2>Interaction between component (ngOnInit, ngOnChange.....)</h2>
-  <app-interact-parent></app-interact-parent>
+    </div><br/>
+    <hr>
+    <h2>Interaction between component (ngOnInit, ngOnChange.....)</h2>
+    <app-interact-parent></app-interact-parent>
 
-  <hr>
-  <h2>IFRAME Example</h2>
-  <app-iframe-example></app-iframe-example>
+    <hr>
+    <h2>IFRAME Example</h2>
+    <app-iframe-example></app-iframe-example>
 
-  <hr>
-  <h2>ENVIRONMENT Example</h2>
-  <div>Create new file in folder environment: environment.preprod,
-    -Add some config in angular.json like filereplacement:
-    -see example in app.component.ts
-  </div>
+    <hr>
+    <h2>ENVIRONMENT Example</h2>
+    <div>Create new file in folder environment: environment.preprod, -Add some config in angular.json like filereplacement:in the line configuration, build, serve -see example in app.component.ts
+    </div>
     <pre>{{env | json}}</pre>
+
+    <hr>
+    <h2>SELECT OPTION</h2>
+    <app-parent-select-field></app-parent-select-field>
 
 </div>
