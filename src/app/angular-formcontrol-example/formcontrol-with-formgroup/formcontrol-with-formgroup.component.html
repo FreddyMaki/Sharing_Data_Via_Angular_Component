@@ -20,8 +20,22 @@
   </div>
 
   <div>
+    Phone:
+    <input formControlName="phone"
+           placeholder="Enter phone number"
+           inputmode="numeric"
+           type="text"
+           maxlength="13"
+           #phone
+           >
+    <label *ngIf="userForm.get('phone')?.invalid && (phoneCtrl.dirty || phoneCtrl.touched )" [ngClass]="'error'">Numéro invalide. </label>
+    <label *ngIf="telephoneInvalide(phone.value) && (phoneCtrl.dirty || phoneCtrl.touched )" [ngClass]="'error'">{{message}}</label>
+  </div>
+
+  <div>
     <button type="submit">Soumettre</button>
     <button type="button" (click)="setDefaultValue()">Set default...</button>
   </div>
+
 </form>
 
